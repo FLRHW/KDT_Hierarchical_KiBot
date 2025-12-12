@@ -561,10 +561,10 @@ definitions:
   BOARD_NAME: Board Name
 
   COMPANY: Company Name
-  DESIGNER: Author
+  DESIGNER: Felipe Rodrigues
 
   LOGO: 'Logos/dummy_logo.png'
-  GIT_URL: 'https://github.com/nguyen-v/KDT_Hierarchical_KiBot'
+  GIT_URL: 'https://github.com/FLRHW/KDT_Hierarchical_KiBot'
 
   # Preflight ==================================================================
 
