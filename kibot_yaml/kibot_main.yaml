@@ -6,28 +6,28 @@ kibot:
 
 variants:
 
-  # Project variants
+  # Project variants (status)
 
   - name: 'DRAFT'
-    comment: "Very early stage of schematic, ignore details."
+    comment: "Early concept stage, schematic drafted."
     type: kibom
     variant: DRAFT
     exclude_filter: '_null'
 
   - name: 'PRELIMINARY'
-    comment: "Close to final schematic."
+    comment: "Minor schematic changes are expected, ready for layout planning."
     type: kibom
     variant: PRELIMINARY
     exclude_filter: '_null'
 
   - name: 'CHECKED'
-    comment: "There shouldn't be any mistakes. Contact the engineer if you find any."
+    comment: "DRC completed, schematic and layout ready for review."
     type: kibom
     variant: CHECKED
     exclude_filter: '_null'
     
   - name: 'RELEASED'
-    comment: "A board with this schematic has been sent to production."
+    comment: "Design ready for prototype build / manufacturing."
     type: kibom
     variant: RELEASED
     exclude_filter: '_null'
@@ -182,14 +182,14 @@ import:
       NAME: @FILT_TP_TOP_ONLY@
       COMMENT: Select only top testpoints
       EXCLUDE_BOTTOM: true
-      EXCLUDE_REFS: @EXCLUDE_REFS@
+      EXCLUDE_REFS: "@EXCLUDE_REFS@"
 
   - file: kibot_filt_testpoints.yaml
     definitions:
       NAME: @FILT_TP_BOTTOM_ONLY@
       COMMENT: Select only bottom testpoints
       EXCLUDE_TOP: true
-      EXCLUDE_REFS: @EXCLUDE_REFS@
+      EXCLUDE_REFS: "@EXCLUDE_REFS@"
 
   # Preflights =================================================================
 
@@ -566,9 +566,12 @@ definitions:
   LOGO: 'Logos/dummy_logo.png'
   GIT_URL: 'https://github.com/FLRHW/KDT_Hierarchical_KiBot'
 
+  #GIT URL: 'https://github.com/FLRHW/KDT_Hierarchical_KiBot'
+  #GIT_URL: 'https://github.com/nguyen-v/KDT_Hierarchical_KiBot'
+  
   # Preflight ==================================================================
 
-  CHECK_ZONE_FILLS: false
+  CHECK_ZONE_FILLS: true
   STACKUP_TABLE_NOTE: external layer thicknesses are specified after plating
 
   # BoM ========================================================================
